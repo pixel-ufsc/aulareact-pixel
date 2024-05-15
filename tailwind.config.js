@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        koho: ["KoHo", "sans-serif"],
+        krub: ["Krub", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 }
