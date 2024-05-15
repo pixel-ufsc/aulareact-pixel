@@ -10,5 +10,5 @@
 
 ## Autores
 
-Jonatan Hartmann
-Rudolfo Lange Neto
+- Jonatan Hartmann
+- Rudolfo Lange Neto
