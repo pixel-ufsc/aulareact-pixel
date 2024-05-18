@@ -76,7 +76,7 @@ export default function Effect() {
         )}
       </div>
       <div className="flex flex-row gap-x-4">
-        <Button to="/">Voltar</Button>
+        <Button to="/state">Voltar</Button>
         <Button to="/ref">Prosseguir</Button>
         </div>
     </>

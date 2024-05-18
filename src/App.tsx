@@ -29,12 +29,11 @@ function App() {
   return (
     <Router>
       <AppContext.Provider value={{nome, setNome}}>
-      <header className="fixed top-0 w-full bg-gray text-white flex items-center justify-between p-2">
-        <div className="flex items-center">
-          <Link to={"/"}>
-            <img src="src/img/logo.png" alt="Logo" className="h-10 mr-2"/>
-          </Link>
-        </div>
+      <header className="fixed justify-between top-0 w-full bg-gray text-midnight font-koho font-bold hover:text-spaceCadet flex items-center justify-between p-2">
+        <Link to={"/"}>
+          <img src="src/img/logo.png" alt="Logo" className="h-10 mr-2"/>
+        </Link>
+        <a target={"_blank"} href={"https://github.com/pixel-ufsc/aulareact-pixel"}>Acessar Repositório</a>
       </header>
       <div className="flex flex-col min-h-screen justify-center items-center p-2 bg-gradient-to-b from-[#82337E] to-[#023047] font-koho font-semibold">
           <Card>
@@ -53,7 +52,7 @@ function App() {
                 <Route path="/effect" element={
                   <Effect />
                 } />
-                    <Route path="/ref" element={
+                <Route path="/ref" element={
                   <Ref />
                 } />
               </Routes>

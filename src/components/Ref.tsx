@@ -66,7 +66,7 @@ export default function Ref() {
         </div>
       </div>
       <div className="flex flex-row gap-x-4">
-        <Button to="/">Voltar</Button>
+        <Button to="/effect">Voltar</Button>
       </div>
     </>
   );
