@@ -22,19 +22,26 @@ function App() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    const regex = /^[a-zA-Z]{3,}$/;
+    const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ\s]{3,}$/u;;
     setIsValid(regex.test(nome));
   }, [nome]);
 
   return (
     <Router>
       <AppContext.Provider value={{nome, setNome}}>
-        <div className="flex flex-col w-full h-screen p-2 items-center bg-gradient-to-b from-[#82337E] to-[#023047] font-koho font-semibold">
+      <header className="fixed top-0 w-full bg-gray text-white flex items-center justify-between p-2">
+        <div className="flex items-center">
+          <Link to={"/"}>
+            <img src="src/img/logo.png" alt="Logo" className="h-10 mr-2"/>
+          </Link>
+        </div>
+      </header>
+      <div className="flex flex-col min-h-screen justify-center items-center p-2 bg-gradient-to-b from-[#82337E] to-[#023047] font-koho font-semibold">
           <Card>
             <Routes>
                 <Route path="/" element={
                   <>
-                    <div className="flex flex-row w-100  m-2 text-xl text-center ">Olá! Qual seu nome?</div>
+                    <div className="flex flex-row w-100  m-2 text-xl text-center font-koho">Olá! Qual é o seu nome?</div>
                     <input ref={inputRef} className="rounded-md p-2 m-2 border-solid transition duration-500 ease-in-out outline-none focus:border-[#FA8400] border-[#023047] border-2 w-full " type="text" onChange={(e) => setNome(e.target.value)} />
                     <span className="flex flex-row"><Button to="/state" disabled={!isValid}>Prosseguir</Button></span>
                   </>
@@ -52,6 +59,9 @@ function App() {
               </Routes>
             </Card>
         </div>
+        <footer className="fixed bottom-0 w-full bg-gray text-midnight text-center py-2 flex items-center justify-center font-koho">
+          <span>© 2024 <a target='_blank' className="font-bold hover:text-spaceCadet" href="https://ejpixel.com.br">Pixel - Soluções Digitais</a> | INE5646</span>
+        </footer>
       </AppContext.Provider>
     </Router>
   )
