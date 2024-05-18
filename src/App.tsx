@@ -31,7 +31,7 @@ function App() {
       <AppContext.Provider value={{nome, setNome}}>
       <header className="fixed justify-between top-0 w-full bg-gray text-midnight font-koho font-bold hover:text-spaceCadet flex items-center justify-between p-2">
         <Link to={"/"}>
-          <img src="src/img/logo.png" alt="Logo" className="h-10 mr-2"/>
+          <img src="logo.png" alt="Logo" className="h-10 mr-2"/>
         </Link>
         <a target={"_blank"} href={"https://github.com/pixel-ufsc/aulareact-pixel"}>Acessar Repositório</a>
       </header>

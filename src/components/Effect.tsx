@@ -70,7 +70,7 @@ export default function Effect() {
             {data ? (
                 <img className="h-full w-full object-contain" src={data[0].url} alt={data[0].id} />
             ) : (
-              <img className="h-full w-full object-contain" src={"src/img/img-default.webp"} alt={"Image Default"} />
+              <img className="h-full w-full object-contain" src={"img-default.webp"} alt={"Image Default"} />
             )}
           </span>
         )}
