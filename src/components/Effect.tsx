@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../App';
 import Button from './Button';
+import { Navigate } from 'react-router-dom';
 
 
 export default function Effect() {
@@ -43,6 +44,7 @@ export default function Effect() {
 
   return (
     <>
+      {!nome && <Navigate to={"/"}/>}
       <div className="w-100  m-2">
         <p className='text-xl text-center'>Eaí {nome}, gostou do exemplo anterior? </p>
         <p className='m-3 text-md text-justify'>Agora chegou a vez do hook <b>useEffect()</b>. Para isso, implementamos uma consulta à api <a target='_blank'>api.thecatapi.com</a>, requisitando fotos de gatinhos. A renderização aguarda a resposta da API em estado de carregamento, o <b>useEffect()</b> é utilizado para renderizar a imagem assim que o response foi dado.</p>
@@ -75,7 +77,7 @@ export default function Effect() {
       </div>
       <div className="flex flex-row gap-x-4">
         <Button to="/">Voltar</Button>
-        <Button to="/effect">Prosseguir</Button>
+        <Button to="/ref">Prosseguir</Button>
         </div>
     </>
   )

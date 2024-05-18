@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../App';
 import Button from './Button';
+import { Navigate } from 'react-router-dom';
 
 
 export default function State() {
@@ -8,6 +9,7 @@ export default function State() {
   const [count, setCount] = useState<number>(0);
   return (
     <>
+      {!nome && <Navigate to={"/"}/>}
       <div className="w-100  m-2">
         <p className='text-xl text-center'>Olá, {nome}! Tudo bem? </p>
         <p className='m-3 text-md text-justify'>Vamos utilizar o hook <b>useState()</b>. Para isso, implementamos um contador, cujo valor é registrado por um <b>state</b>.</p>
