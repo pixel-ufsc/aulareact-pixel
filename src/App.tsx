@@ -42,7 +42,7 @@ function App() {
                 <Route path="/" element={
                   <>
                     <div className="flex flex-row w-100  m-2 text-xl text-center font-koho">Olá! Qual é o seu nome?</div>
-                    <input ref={inputRef} className="rounded-md p-2 m-2 border-solid transition duration-500 ease-in-out outline-none focus:border-[#FA8400] border-[#023047] border-2 w-full " type="text" onChange={(e) => setNome(e.target.value)} />
+                    <input ref={inputRef} className="rounded-md p-2 m-2 cursor-pointer transition duration-500 ease-in-out outline-none focus:border-[#FA8400] border-[#023047] border-2 w-full " type="text" onChange={(e) => setNome(e.target.value)} />
                     <span className="flex flex-row"><Button to="/state" disabled={!isValid}>Prosseguir</Button></span>
                   </>
                 } />
